@@ -1,0 +1,17 @@
+<?php
+
+$router->get('/', 'index.php');
+$router->get('/about', 'about.php');
+$router->get('/contact', 'contact.php');
+$router->get('/shop', 'shop.php');
+$router->get('/product','product/index.php');
+$router->get('/wishlist','wishlist/index.php');
+
+$router->get('/register', 'registration/create.php')->only('guest');
+$router->post('/register', 'registration/store.php')->only('guest');
+
+$router->get('/login', 'session/create.php')->only('guest');
+$router->post('/session', 'session/store.php')->only('guest');
+$router->delete('/session', 'session/destroy.php')->only('auth');
+
+$router->get('/cart', 'shoppingcart/index.php');
