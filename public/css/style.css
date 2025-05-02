@@ -1,0 +1,86 @@
+.img-background {
+    height:600px;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    filter: saturate(0.9) brightness(98%);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.primary-btn {
+    background-color: #F2F0EA;
+    color: rgba(0, 0, 0, 0.862);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.primary-btn:hover {
+    background-color: #E0DDD7; /* Slightly darker cream on hover */
+}
+
+
+.secondary-btn {
+    background-color: #F2F0EA;
+    color: rgba(0, 0, 0, 0.862);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: #e0ddd7;
+    color: black; /* better contrast on cream */
+}
+
+
+.btn-dark:hover {
+background-color: #333;
+transition: background-color 0.3s ease;
+}
+
+.footerbg{
+    background-color: #F2F0EA;
+
+}
+
+.copyrightbg{
+    background-color: #fffcf5ef;
+}
+
+.primary-bg{
+    background-color: #aee4ff36; 
+
+}
+
+/* Custom Pagination Button Styles */
+.custom-pagination-btn {
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Default background color */
+    border: 1px solid #ddd; /* Border color */
+    margin: 0 2px; /* Spacing between buttons */
+    padding: 8px 12px; /* Padding for buttons */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.custom-pagination-btn:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    border-color: #007bff; /* Border color on hover */
+}
+
+/* Active Pagination Button Style */
+.custom-pagination-active {
+    background-color: #007bff; /* Active background color */
+    color: #fff; /* Active text color */
+    border-color: #007bff; /* Active border color */
+}
+
+.custom-pagination-active:hover {
+    background-color: #0056b3; /* Active background color on hover */
+    border-color: #0056b3; /* Active border color on hover */
+}
