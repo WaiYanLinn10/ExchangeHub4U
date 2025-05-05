@@ -10,23 +10,16 @@ $userId = (int) Session::get('id');
 
 // Check if a customer with this user ID exists
 $customer = $db->query('SELECT * FROM customer WHERE user_id = ?', [$userId])->find();
-
-
-// if (Session::has('id') && Session::get('profile') == 'false') { 
-//     redirect('/account/create');
-// }else{
+// dd($customer);
+$customer_name = $customer['customer_name'] ?? null;
+$customer_phone = $customer['customer_phone'] ?? null;
+$customer_address = $customer['customer_address'] ?? null;
 
 if (Session::has('id') && !$customer){
     redirect('/account/create');
 }else{
-    $result = $db->query(
-        'SELECT * FROM customer c INNER JOIN user u ON c.user_id = u.user_id WHERE c.user_id = :id',
-         ['id' => $userId]
-     )->find();
+    $user = $db->query('SELECT * FROM user WHERE user_id = ?', [$userId])->find();
 
-     // dd($customer);
-    // Check if the customer has an order
-    // $order = $db->query('SELECT * FROM `order` WHERE customer_id = ?', [$customer['customer_id']])->find();
 
     // dd($order);
 
@@ -41,13 +34,13 @@ if (Session::has('id') && !$customer){
         WHERE customer_id = ?', [$customer['customer_id']])->get();
 
 
-     
-    // dd($result);
-
 
         view("account/index.view.php", [
         'heading' => 'My Account',
-        'user' => $result,
+        'user' => $user,
+        'customer_name' => $customer_name,
+        'customer_phone' => $customer_phone,
+        'customer_address' => $customer_address,
         'order' => $order,
         'faq' => $faq,
         'errors' => [],

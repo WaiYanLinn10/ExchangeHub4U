@@ -2,7 +2,7 @@
 <?php require base_path('views/partials/nav.php') ?>
 
 <head>
-    <div  style="height: 52px; background-color: #efaa083e;">
+    <div  style="height: 52px; background-color: #A8D5E3;">
         <div class="container">
             <div class="row h-100 align-items-center">
                 <div class="col-7 text-dark p-3">

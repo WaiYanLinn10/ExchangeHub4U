@@ -50,7 +50,7 @@
                                     <?= htmlspecialchars($wishlistData['product_name']) ?>
                                 </a>
                             </h5>
-                            <h6 class="mt-1 text-center" style="color:#d09100;">
+                            <h6 class="mt-1 text-center" style="color:#0b6580;">
                                 <?= htmlspecialchars($wishlistData['product_price']) ?> MMK
                             </h6>
                             <h6 class="mt-1 text-center <?= $wishlistData['product_quantity'] > 0 ? 'text-success' : 'text-danger' ?> text-opacity-75">

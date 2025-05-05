@@ -74,7 +74,7 @@
                                         </div>
                                         <div class="col-sm-6 mb-4">
                                             <label class="fw-semibold mb-2">FULLNAME</label>
-                                            <input type="text" class="form-control py-2 rounded-0" value="<?= $user['customer_name'] ?? 'N/A';  ?>" disabled>
+                                            <input type="text" class="form-control py-2 rounded-0" value="<?= $customer_name;  ?>" disabled>
                                         </div>
                                     </div>
                                     <!-- <div class="row">
@@ -99,7 +99,7 @@
                                     <div class="row">
                                         <div class="col-sm-6 mb-4">
                                             <label class="fw-semibold mb-2">PHONE NUMBER</label>
-                                            <input type="text" class="form-control py-2 rounded-0" value="<?= $user['customer_phone'] ?? 'N/A'; ?>" disabled>
+                                            <input type="text" class="form-control py-2 rounded-0" value="<?= $customer_phone; ?>" disabled>
                                         </div>
                                         <div class="col-sm-6 mb-4">
                                             <label class="fw-semibold mb-2">EMAIL</label>
@@ -109,7 +109,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <label class="fw-semibold mb-2">DETAILS ADDRESS</label>
-                                            <textarea class="form-control rounded-0" rows="5" disabled><?= $user['customer_address'] ?? 'N/A';?></textarea>
+                                            <textarea class="form-control rounded-0" rows="5" disabled><?= $customer_address;?></textarea>
                                         </div>
                                     </div>
                                     
@@ -232,14 +232,14 @@
                                                 <td class="py-3"><?= htmlspecialchars($orderData['order_date']); ?></td>
                                                 <td class="py-3"><?= htmlspecialchars($orderData['total_amount']); ?></td>
                                                 <td class="py-3">
-                                                    <?php if ($orderData['delivered'] === 'true'): ?>
+                                                    <?php if ($orderData['delivered'] === 1): ?>
                                                         <span class="badge text-bg-success">Delivered</span>
                                                     <?php else: ?>
                                                         <span class="badge text-bg-danger">Not-Delivered</span>
                                                     <?php endif; ?>
                                                 </td>
                                                 <td class="py-3">
-                                                    <a href="view_order.php?id=<?= htmlspecialchars($orderData['order_id']); ?>" class="link-secondary">View Details</a>
+                                                    <a href="/order/view?id=<?= htmlspecialchars($orderData['order_id']); ?>" class="link-secondary">View Details</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

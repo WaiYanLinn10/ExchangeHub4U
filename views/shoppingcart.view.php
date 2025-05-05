@@ -49,12 +49,12 @@
                                                 <?= htmlspecialchars($item['brand_name']) ?>
                                             </a>
                                         </p>
-                                        <small class="d-inline-flex mb-1 px-2 fw-semibold text-warning bg-warning bg-opacity-10 border border-warning border-opacity-25">
+                                        <small class="d-inline-flex mb-1 px-2 fw-semibold text-secondary bg-secondary bg-opacity-10 border border-secondary border-opacity-25">
                                             <?= htmlspecialchars($item['category_name']) ?>
                                         </small>
                                     </div>
                                     <div class="col-sm-2 text-center">
-                                        <p class="fw-bold mb-3" style="color:#d09100;">
+                                        <p class="fw-bold mb-3" style="color:#0b6580;">
                                             <span class="text-secondary"><?= htmlspecialchars($item['quantity']) ?> x </span>
                                             <?= number_format(htmlspecialchars($item['product_price']), 2) ?> MMK
                                         </p>
@@ -83,7 +83,7 @@
                             <input type="hidden" name="cart_items[]" value="<?= $item['product_id'] ?>">
                             <input type="hidden" name="cart_quantities[]" value="<?= $item['quantity'] ?>">
                         <?php endforeach; ?>
-                        <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm fw-bold px-4 py-2">
+                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm fw-bold px-4 py-2">
                             <i class="fa-solid fa-credit-card me-2"></i> Checkout
                         </button>
                     </form>

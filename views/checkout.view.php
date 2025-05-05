@@ -15,8 +15,8 @@
                 <label class="fw-bold mt-3">First Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="firstname" required>
 
-                <label class="fw-bold mt-3">Last Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="lastname" required>
+                <label class="fw-bold mt-3">Last Name </span></label>
+                <input type="text" class="form-control" name="lastname" >
 
                 <label class="fw-bold mt-3">Phone <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="phone" required>

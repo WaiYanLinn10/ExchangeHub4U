@@ -53,6 +53,9 @@
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
                         <a href="/shop?start=2000001&end=9999999" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 2000001 && $filters['end'] == 9999999 ? 'link-secondary fw-bold' : 'link-dark' ?>">2000001 - 9999999</a>
                     </li>
+                    <li class="list-group-item px-0 border-0 border-bottom rounded-0">
+                        <a href="/shop?start=10000000&end=999999999" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 10000000 && $filters['end'] == 999999999 ? 'link-secondary fw-bold' : 'link-dark' ?>">>10000000</a>
+                    </li>
                 </ul>
             </div>
 
