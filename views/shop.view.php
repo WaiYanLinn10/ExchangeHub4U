@@ -2,6 +2,7 @@
 <?php require('partials/nav.php') ?>
 <?php require('partials/banner.php') ?>
 
+
 <main>
     <div class="container my-5">
         <div class="row">
@@ -10,9 +11,9 @@
                 <h5 class="pb-2 border-bottom border-2 fw-bold">Categories</h5>
                 <ul class="list-group mb-5">
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop" class="text-decoration-none">
+                        <a href="/shop" class="text-decoration-none text-dark">
                             All
-                            <span class="badge p-1 secondary-btn rounded-pill"><?= $categoryAllCount ?></span>
+                            <!-- <span class="badge p-1 rounded-pill"><?= $categoryAllCount ?></span> -->
                         </a>
                     </li>
                     <?php foreach ($categories as $category): ?>
@@ -23,7 +24,7 @@
                         $categoryCount = count($categoryCountResult);
                         ?>
                         <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                            <a href="/shop?category=<?= $category['category_id'] ?>" class="text-decoration-none <?= isset($filters['category']) && $filters['category'] == $category['category_id'] ? 'link-warning fw-bold' : 'link-dark' ?>">
+                            <a href="/shop?category=<?= $category['category_id'] ?>" class="text-decoration-none <?= isset($filters['category']) && $filters['category'] == $category['category_id'] ? 'link-secondary fw-bold' : 'link-dark' ?>">
                                 <?= $category['category_name'] ?>
                                 <span class="badge p-1 secondary-btn rounded-pill"><?= $categoryCount ?></span>
                             </a>
@@ -35,22 +36,22 @@
                 <h5 class="pb-2 border-bottom border-2 fw-bold">Price</h5>
                 <ul class="list-group mb-5">
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop" class="text-decoration-none">All</a>
+                        <a href="/shop" class="text-decoration-none <?= isset($filters['start']) && isset($filters['end']) ? 'link-dark' : 'link-secondary fw-bold' ?>">All</a>
                     </li>
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop?start=0&end=50000" class="text-decoration-none">0 - 50000</a>
+                        <a href="/shop?start=0&end=50000" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 0 && $filters['end'] == 50000 ? 'link-secondary fw-bold' : 'link-dark' ?>">0 - 50000</a>
                     </li>
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop?start=50001&end=100000" class="text-decoration-none">50001 - 100000</a>
+                        <a href="/shop?start=50001&end=100000" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 50001 && $filters['end'] == 100000 ? 'link-secondary fw-bold' : 'link-dark' ?>">50001 - 100000</a>
                     </li>
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop?start=1000001&end=1500000" class="text-decoration-none">1000001 - 1500000</a>
+                        <a href="/shop?start=1000001&end=1500000" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 1000001 && $filters['end'] == 1500000 ? 'link-secondary fw-bold' : 'link-dark' ?>">1000001 - 1500000</a>
                     </li>
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop?start=1500001&end=2000000" class="text-decoration-none">1500001 - 2000000</a>
+                        <a href="/shop?start=1500001&end=2000000" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 1500001 && $filters['end'] == 2000000 ? 'link-secondary fw-bold' : 'link-dark' ?>">1500001 - 2000000</a>
                     </li>
                     <li class="list-group-item px-0 border-0 border-bottom rounded-0">
-                        <a href="/shop?start=2000001&end=9999999" class="text-decoration-none">2000001 - 9999999</a>
+                        <a href="/shop?start=2000001&end=9999999" class="text-decoration-none <?= isset($filters['start']) && $filters['start'] == 2000001 && $filters['end'] == 9999999 ? 'link-secondary fw-bold' : 'link-dark' ?>">2000001 - 9999999</a>
                     </li>
                 </ul>
             </div>

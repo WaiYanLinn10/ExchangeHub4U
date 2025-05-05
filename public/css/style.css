@@ -22,7 +22,7 @@
 
 
 .secondary-btn {
-    background-color: #F2F0EA;
+    background-color: #A8D5E3;
     color: rgba(0, 0, 0, 0.862);
     border: none;
     padding: 10px 20px;
@@ -31,8 +31,8 @@
 }
 
 .secondary-btn:hover {
-    background-color: #e0ddd7;
-    color: black; /* better contrast on cream */
+    background-color: #87C2D1; /* Slightly darker shade of A8D5E3 */
+    color: black; /* Better contrast */
 }
 
 
@@ -58,8 +58,8 @@ transition: background-color 0.3s ease;
 /* Custom Pagination Button Styles */
 .custom-pagination-btn {
     color: #333; /* Default text color */
-    background-color: #f8f9fa; /* Default background color */
-    border: 1px solid #ddd; /* Border color */
+    background-color: #A8D5E3; /* Default background color */
+    border: 1px solid #87C2D1; /* Border color */
     margin: 0 2px; /* Spacing between buttons */
     padding: 8px 12px; /* Padding for buttons */
     border-radius: 4px; /* Rounded corners */
@@ -68,19 +68,19 @@ transition: background-color 0.3s ease;
 }
 
 .custom-pagination-btn:hover {
-    background-color: #007bff; /* Background color on hover */
+    background-color: #87C2D1; /* Background color on hover */
     color: #fff; /* Text color on hover */
-    border-color: #007bff; /* Border color on hover */
+    border-color: #87C2D1; /* Border color on hover */
 }
 
 /* Active Pagination Button Style */
 .custom-pagination-active {
-    background-color: #007bff; /* Active background color */
+    background-color: #87C2D1; /* Active background color */
     color: #fff; /* Active text color */
-    border-color: #007bff; /* Active border color */
+    border-color: #87C2D1; /* Active border color */
 }
 
 .custom-pagination-active:hover {
-    background-color: #0056b3; /* Active background color on hover */
-    border-color: #0056b3; /* Active border color on hover */
+    background-color: #5FA9B3; /* Active background color on hover */
+    border-color: #5FA9B3; /* Active border color on hover */
 }

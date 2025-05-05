@@ -40,6 +40,7 @@ $prodsPerPage = 6;
 $paginatedResult = $shopManager->getPaginatedProducts($productsQuery, $params, $page, $prodsPerPage);
 $products = $paginatedResult['products'];
 $numberOfPage = $paginatedResult['totalPages'];
+// dd($categoryAllCount);
 
 view("shop.view.php", [
     'heading' => 'Shop',

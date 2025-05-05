@@ -25,6 +25,7 @@ $menu_items = [
     "/admin/order" => ["Orders", "fa-receipt"],
     "/admin/product" => ["Products", "fa-box"],
     "/admin/admin" => ["Admins", "fa-user-shield"],
+    "/admin/user" => ["Users", "fa-user"],
     "/admin/customer" => ["Customers", "fa-user-friends"],
     "/admin/brand" => ["Brands", "fa-tags"],
     "/admin/category" => ["Categories", "fa-folder"],
@@ -45,13 +46,13 @@ $menu_items = [
     <link rel="stylesheet" href="css/style.css">
     <style>
         .nav-link.active {
-                background-color:rgb(158, 66, 133) !important; /* Change to your preferred color */
-                color: white !important; /* Ensure text remains readable */
+                background-color:#A8D5E3 !important; /* Change to your preferred color */
+                color: black !important; /* Ensure text remains readable */
             }
-        /* .nav-link:hover {
-        background-color: rgb(112, 44, 100) !important; /* Suitable hover color */
+         /* .nav-link:hover {
+        background-color: rgb(112, 44, 100) !important;
         color: white !important;
-    } */
+    }  */
 
 
     </style>

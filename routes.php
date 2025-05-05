@@ -52,6 +52,10 @@ $router->patch('/admin/admin','backend/admins/update.php')->only('admin');
 $router->delete('/admin/admin','backend/admins/destory.php')->only('admin');
 
 
+$router->get('/admin/user','backend/users/index.php')->only('admin');
+$router->post('/admin/user','backend/users/store.php')->only('admin');
+$router->patch('/admin/user','backend/users/update.php')->only('admin');
+$router->delete('/admin/user','backend/users/destory.php')->only('admin');
 
 $router->get('/admin/customer','backend/customers/index.php')->only('admin');
 $router->get('/admin/customer/show','backend/customers/show.php')->only('admin');
