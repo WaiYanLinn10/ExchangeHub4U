@@ -44,9 +44,9 @@
     <hr class="my-5 border border-1">
     
     <h3 class="text-center">
-        Send a message
-        <form action="contactusEmail.php" method="POST">
-            <div class="row my-3 mt-4">
+        Ask Question
+        <form action="/question" method="POST">
+            <!-- <div class="row my-3 mt-4">
                 <div class="col-md-3"></div>
                 <div class="col-md-3">
                     <input type="text" class="form-control rounded-0" placeholder="NAME" name="name">
@@ -54,11 +54,11 @@
                 <div class="col-md-3">
                     <input type="text" class="form-control rounded-0" placeholder="EMAIL" name="email">
                 </div>
-            </div>
+            </div> -->
             <div class="row my-3 mt-2">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <textarea name="message" rows="5" class="form-control rounded-0" placeholder="MESSAGE"></textarea>
+                    <textarea name="question" rows="5" class="form-control rounded-0" placeholder="MESSAGE"></textarea>
                 </div>
             </div>
             <button type="submit" class="rounded-0 secondary-btn btn mt-2 px-4 py-2">SUBMIT</button>

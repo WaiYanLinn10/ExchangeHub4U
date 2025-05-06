@@ -136,7 +136,7 @@
                                             </div>
                                             <div class="col-sm-6 mb-4">
                                                 <label class="fw-semibold mb-2">FULLNAME</label>
-                                                <input type="text" name="full_name" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" value="<?= $user['customer_name']?? 'N/A';?>" required>
+                                                <input type="text" name="full_name" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" value="<?= $customer_name ?>" required>
                                             </div>
                                         </div>
                                         <!-- <div class="row">
@@ -151,22 +151,22 @@
                                         <div class="row">
                                             <div class="col-sm-6 mb-4">
                                                 <label class="fw-semibold mb-2">PHONE NUMBER</label>
-                                                <input type="text" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" name="phone" value="<?= $user['customer_phone']?? 'N/A';?>" required>
+                                                <input type="text" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" name="phone" value="<?= $customer_phone?>" required>
                                             </div>
                                             <div class="col-sm-6 mb-4">
                                                 <label class="fw-semibold mb-2">EMAIL</label>
-                                                <input type="text" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" name="email" value="<?= $user['email']?? 'N/A';?>" required>
+                                                <input type="text" class="form-control py-2 rounded-0  bg-secondary bg-opacity-25" name="email" value="<?= $user['email']?>" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12 mb-4">
                                                 <label class="fw-semibold mb-2">DETAILS ADDRESS</label>
-                                                <textarea name="address" rows="5" class="form-control p-2 rounded-0 bg-secondary  px-3 bg-opacity-25" required><?= $user['customer_address']?? 'N/A';?></textarea>
+                                                <textarea name="address" rows="5" class="form-control p-2 rounded-0 bg-secondary  px-3 bg-opacity-25" required><?= $customer_address?></textarea>
                                             </div>
                                         </div>
 
                                         
-                                        <<button type="submit" class="btn btn-secondary float-end rounded-0">Save Changes</button>
+                                        <button type="submit" class="btn btn-secondary float-end rounded-0">Save Changes</button>
                                         <button type="button" class="btn btn-secondary mx-3 px-4 float-end rounded-0" data-bs-dismiss="modal">Close</button>
                                     </form>
                                 </div>

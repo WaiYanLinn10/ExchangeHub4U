@@ -15,6 +15,29 @@
     </div>
 </header>
 
+<?php use Core\Session; ?>
+    <?php if (Session::has('message')): ?>
+        <?php list($type, $message) = Session::get('message'); ?>
+
+        <!-- Ensure Bootstrap-friendly classes -->
+        <div class="alert <?php echo ($type === 'success') ? 'alert-success' : 'alert-danger'; ?>" id="flashMessage">
+            <?php echo $message; ?>
+        </div>
+
+        <?php Session::unflash(); // Remove message after displaying ?>
+    <?php endif; ?>
+
+    <script>
+        // Auto-hide the flash message after 3 seconds
+        setTimeout(function() {
+            let alert = document.getElementById('flashMessage');
+            if (alert) {
+                alert.style.transition = "opacity 0.5s";
+                alert.style.opacity = "0";
+                setTimeout(() => alert.remove(), 500);
+            }
+        }, 3000);
+    </script>
 
 <div class="container my-5">
     <div class="text-center my-5">
@@ -85,7 +108,7 @@ btn.addEventListener('click',function(){
 
         let form = document.createElement('form');
         form.id='questionForm';
-        form.action="addQuestion.php";
+        form.action="/question";
         form.method="POST";
         div.append(form);
 

@@ -35,6 +35,8 @@ $router->delete('/wishlist', 'frontend/wishlist/destory.php')->only('auth');
 $router->post('/checkout', 'frontend/checkout/index.php')->only('auth');
 $router->post('/order', 'frontend/checkout/order_add.php')->only('auth');
 
+$router->post('/question','frontend/question/add.php')->only('auth');
+
 $router->get('/admin', 'backend/index.php')->only('admin');
 
 $router->get('/admin/order','backend/orders/index.php')->only('admin');
