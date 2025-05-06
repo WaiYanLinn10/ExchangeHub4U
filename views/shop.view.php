@@ -83,7 +83,7 @@
                                 <a href="/product?id=<?= $product['product_id'] ?>">
                                 <img src="images/products/<?= $product['product_img'] ?>" alt="" class="img-fluid hvr-grow h-100">                            </div>
                                 
-                                <h6 class="mt-3 text-center" style="color:#d09100;"><?= $product['product_price'] ?> MMK</h6>
+                                <h6 class="mt-3 text-center" style="color:#7FBACD;"><?= $product['product_price'] ?> MMK</h6>
                             <h5 class="mt-2 text-center fw-bold"><a href="/product?id=<?= $product['product_id'] ?>" class="text-decoration-none link-dark"><?= $product['product_name'] ?></a></h5>
                         </div>
                     <?php endforeach; ?>

@@ -112,5 +112,52 @@ if (Session::has('id')) {
     </div>
 </div>
 
+<!-- Mobile Navigation -->
+    <nav class="navbar navbar-expand-lg bg-light d-lg-none d-xl-none shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ExchangeHub4U</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- offcanvas menu for mobile version -->
+    <div class="offcanvas-lg offcanvas-end d-lg-none d-xl-none" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header bg-dark">
+            <h5 class="offcanvas-title text-light">MENU</h5>
+            <button type="button" class="btn-close bg-light rounded-pill" data-bs-dismiss="offcanvas" data-bs-target="#staticBackdrop" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="nav flex-column">
+                <a class="nav-link text-dark text-uppercase" href="/">Home</a>
+                <a class="nav-link text-dark text-uppercase" href="/shop">Shop</a>
+                <a class="nav-link text-dark text-uppercase" href="/about">About</a>
+                <a class="nav-link text-dark text-uppercase" href="/blog">Blog</a>
+                <a class="nav-link text-dark text-uppercase iconClass" href="/wishlist">WISHLIST</a>
+                <a class="nav-link text-dark text-uppercase iconClass" href="/cart">CART</a>
+                <?php
+                    if(!empty($_SESSION['id'])){
+                ?>
+                    <a class="nav-link text-dark text-uppercase" href="/account/index">ACCOUNT</a>
+                    <form method="POST" action="/session">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <button class="nav-link text-dark text-uppercase">
+                            LOGOUT
+                        </button>
+                    </form>
+                <?php
+                    }else{
+                ?>
+                    <a class="nav-link text-dark text-uppercase" href="/register">REGISTER</a>
+                    <a class="nav-link text-dark text-uppercase" href="/login">LOGIN</a>
+                <?php
+                    }
+                ?>
+            </nav>
+        </div>
+    </div>
+</div>
+
 
 

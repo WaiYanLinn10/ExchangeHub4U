@@ -1,6 +1,6 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
-s
+
 <head>
     <div  style="height: 52px; background-color: #A8D5E3;">
         <div class="container">
