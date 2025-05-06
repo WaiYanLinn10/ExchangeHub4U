@@ -47,7 +47,3 @@ Follow the steps below to set up the system on your PC:
 ---
 
  ✅ You're all set!
-Thank you for using the system developed by Team Complex. We hope it serves your needs well.
-
-Enjoy!  
-😉
