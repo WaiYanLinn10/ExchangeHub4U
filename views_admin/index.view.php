@@ -2,8 +2,7 @@
 <?php
 
     use Core\Session;
-    use Core\Database;
-    use Core\App;
+ 
 
     // Display flash messages
     if (Session::has('_flash')) {
@@ -62,30 +61,29 @@
 <div class="container-fluid px-4 mt-5">
     <h4><?= $heading?></h4>
     <div class="row my-4">
-        <div class="col-sm-3">
+
+        <div class="col-sm-4">
             <div class="card shadow-sm bg-light text-center py-4">
-                <h5>Total Products</h5>
-                <h2><?php echo $totalProducts; ?></h2>
+                <h5>Total Income</h5>
+                <h2 class = "text-success"><?php echo array_sum($totalSales); ?> MMK</h2>
             </div>
+
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="card shadow-sm bg-light text-center py-4">
                 <h5>Total Orders</h5>
                 <h2><?php echo $totalOrders; ?></h2>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="card shadow-sm bg-light text-center py-4">
                 <h5>Total Customers</h5>
                 <h2><?php echo $totalCustomers; ?></h2>
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="card shadow-sm bg-light text-center py-4">
-                <h5>Total Brands</h5>
-                <h2><?php echo $totalBrands; ?></h2>
-            </div>
-        </div>
+        
+
+
     </div>
 
     <div class="my-5 card shadow-sm">
@@ -203,3 +201,4 @@
 
 
 <?php require('partials/footer.php') ?>
+

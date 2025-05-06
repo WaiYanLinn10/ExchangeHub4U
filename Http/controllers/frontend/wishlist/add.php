@@ -6,9 +6,9 @@ use Core\App;
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $productId = $_POST['product_id'][0] ?? null;
+    $productId = $_POST['product_id'] ?? null;
 
-    // dd($_POST['product_id']);
+    // dd($productId);
 
     $userId = Session::getInt('id');
     
@@ -47,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check if the product is already in the wishlist
     $existing = $db->query("SELECT * FROM wishlist_product WHERE wishlist_id = ? AND product_id = ?", [$wishlistId, $productId])->find();
-
     if ($existing) {
         Session::flash('message', ['fail', "This product is already in your wishlist."]);
     } else {

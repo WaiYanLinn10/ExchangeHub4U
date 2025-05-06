@@ -17,13 +17,13 @@
                             </div>
                             <div class="mb-3">
                                 <label for="answer" class="form-label">Answer</label>
-                                <textarea name="answer" rows="4" class="form-control" placeholder="Your answer . . ." required></textarea>
+                                <textarea name="answer" rows="4" class="form-control" placeholder="Your answer . . ."></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="status" class="form-label">Post as FAQ</label>
                                 <select name="status" class="form-select" required>
-                                    <option value="false">False</option>
-                                    <option value="true">True</option>
+                                    <option value="0">False</option>
+                                    <option value="1">True</option>
                                 </select>
                             </div>
 

@@ -65,10 +65,10 @@
                         <p class="text-muted mt-2">We found <strong><?= count($products) ?></strong> products available for you.</p>
                     </div>
                     <div class="col-sm-4">
-                        <form action="/shop" method="GET">
+                        <form action="/shop" method="GET">  
                             <div class="input-group">
-                                <input type="text" name="search" class="form-control border-bottom border-0 text-warning rounded-0" placeholder="Search . . . " value="<?= isset($filters['search']) ? $filters['search'] : '' ?>">
-                                <button class="btn btn-outline-warning bg-white fw-bold border-0 border-bottom rounded-0" type="submit">
+                                <input type="text" name="search" class="form-control border-bottom border-0 text-dark rounded-0" placeholder="Search . . . " value="<?= isset($filters['search']) ? $filters['search'] : '' ?>">
+                                <button class="btn btn-outline-secondary border-dark fw-bold rounded" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </div>

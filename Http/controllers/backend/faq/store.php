@@ -10,7 +10,7 @@ use Core\Session;
 $db = App::resolve(Database::class);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (empty($_POST['question']) || empty($_POST['answer']) || empty($_POST['status'])){
+    if (empty($_POST['question']) ){
         Session::flash('fail', 'The new FAQ data cannot be empty.');
         redirect('/admin/faq');
         exit;

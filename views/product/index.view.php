@@ -1,6 +1,6 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
-
+s
 <head>
     <div  style="height: 52px; background-color: #A8D5E3;">
         <div class="container">
@@ -56,7 +56,7 @@
             <div class="col-md-7">
                 <div class="container">
                     <h1><?= $productData['product_name'];?></h1>
-                    <h3 style="color:#d09100;"><?= $productData['product_price'];?> MMK</h3>
+                    <h3 style="color:#7FBACD;"><?= $productData['product_price'];?> MMK</h3>
                     <hr class="my-5">
                     <h6 class="mb-4">Availability : 
                         <?php if($productData['product_quantity'] > 0){ ?>
