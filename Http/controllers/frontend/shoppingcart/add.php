@@ -30,7 +30,7 @@ if (!$product || $product['product_quantity'] <= 0) {
 $customer = $db->query("SELECT * FROM customer WHERE user_id = ?", [$userId])->find();
 if (!$customer) {
     Session::flash('message', ['fail', 'Customer not found.']);
-    redirect('/shop');
+    redirect('/account/create');
 }
 
 $customerId = $customer['customer_id'];

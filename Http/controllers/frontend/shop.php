@@ -28,7 +28,6 @@ if (isset($_GET['search'])) {
     $filters['search'] = $_GET['search'];
 }
 
-
 $queryData = $shopManager->getProducts($filters);
 $productsQuery = $queryData['query'];
 $params = $queryData['params'];

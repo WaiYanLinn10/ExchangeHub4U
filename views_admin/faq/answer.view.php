@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="answer" class="form-label">Answer</label>
-                                    <textarea class="form-control" name="answer" rows="3"><?= htmlspecialchars($faq['faq_answer']); ?></textarea>
+                                    <textarea class="form-control" name="answer" rows="3"><?=($faq['faq_answer']); ?></textarea>
                                 </div>
                             </div>
                         </div>
