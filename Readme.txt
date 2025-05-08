@@ -41,7 +41,7 @@ Follow the steps below to set up the system on your PC:
 
 > ⚠️ Important: This system will not work without the database.
 
-- Create a new database in phpMyAdmin named: `exchangehub4u`
+- Create a new database in named: `exchangehub4u`
 - Import the provided SQL file (`exchangehub4u.sql`) into this database.
 
 ---
